@@ -1,0 +1,125 @@
+//clean default Swiper arrows
+.swiper-button-prev:after, .swiper-button-next:after
+  content: ""
+
+//prev-next arrows - angebot
+.swiper-button-next.angebot-swiper-button-next,
+.swiper-button-prev.angebot-swiper-button-prev
+    @apply w-[52px] md:w-[140px] top-20 md:top-28 xl:top-44
+
+.swiper-button-prev.angebot-swiper-button-prev,
+.swiper-button-prev.single-zimmer-swiper-button-prev,
+.swiper-button-prev.zimmer-swiper-slider-button-prev,
+.swiper-button-prev.suite-swiper-slider-button-prev,
+.swiper-button-prev.swiper-sommer-button-prev,
+.swiper-button-prev.swiper-winter-button-prev
+    @apply -scale-x-100
+
+.swiper-button-next.angebot-swiper-button-next
+    @apply right-0 left-auto xl:left-[475px]
+
+//prev-next arrows - zimmer overview
+.swiper-button-next.zimmer-swiper-slider-button-next,
+.swiper-button-prev.zimmer-swiper-slider-button-prev,
+.swiper-button-next.suite-swiper-slider-button-next,
+.swiper-button-prev.suite-swiper-slider-button-prev,
+.swiper-button-next.swiper-winter-button-next,
+.swiper-button-prev.swiper-winter-button-prev,
+.swiper-button-next.swiper-sommer-button-next,
+.swiper-button-prev.swiper-sommer-button-prev
+    @apply w-[52px] md:w-[118px] lg:w-[80px] 2xl:w-[118px] top-[28px] md:top-4
+
+.swiper-button-prev.zimmer-swiper-slider-button-prev,
+.swiper-button-prev.suite-swiper-slider-button-prev,
+.swiper-button-prev.swiper-sommer-button-prev,
+.swiper-button-prev.swiper-winter-button-prev
+    @apply md:right-36 md:left-auto
+
+//prev-next arrows - zimmer single
+.swiper-button-next.single-zimmer-swiper-button-next,
+.swiper-button-prev.single-zimmer-swiper-button-prev
+    @apply w-[52px] md:w-[118px] lg:w-[80px] 2xl:w-[118px] -bottom-[4.5rem] top-auto
+
+.swiper-button-next.single-zimmer-swiper-button-next
+    @apply right-0
+
+.swiper-button-prev.single-zimmer-swiper-button-prev
+    @apply xl:right-40 left-auto
+
+// swiper for content with tabs (rooms)
+.fade-content
+    opacity: 0
+    transition: opacity 0.3s ease-in-out
+
+.swiper-slide-active .fade-content
+    opacity: 1
+
+.room-details .swiper-pagination
+    position: absolute
+    bottom: 20px
+    left: 0
+    right: 0
+    margin: 0 auto
+
+.swiper-pagination-horizontal.swiper-pagination-bullets
+    .swiper-pagination-bullet
+        @apply font-serif font-thin text-sm md:text-base xl:text-[22px] text-blue leading-7 md:leading-none tracking-[0.98px] md:tracking-[2.6px] uppercase break-words hyphens-auto w-full bg-transparent min-h-[60px] md:min-h-[68px] xl:min-h-[82px] rounded-none flex items-center opacity-100 pl-6 pr-5 m-0 justify-between border-b border-blue md:border-transparent
+        &-active
+            @apply bg-[#FFF8F1] border-b border-blue
+            .swiper-arrow
+                display: inline-block
+        img
+            @apply w-[52px] md:w-[60px] lg:w-[80px] 2xl:w-[118px] ml-5
+
+.swiper-arrow
+    display: none
+
+.swiper-tabs-pagination a:hover .swiper-arrow
+    display: inline-block
+
+
+.page-template-page-home
+    .hero-swiper
+        .swiper-wrapper
+            .swiper-slide
+                .slide-bg
+                    background-position: center center
+
+@media ( max-width: 768px )
+    .page-template-page-home
+        .hero-swiper
+            .swiper-wrapper
+                .swiper-slide
+                    .slide-bg
+                        &--0
+                           background-position: 53%
+                        &--1
+                            background-position: 37%
+                        &--2
+                            background-position: 42%
+                        &--3
+                            background-position: 47.5%
+                        &--4
+                            background-position: 41%
+                        &--5
+                            background-position: 50%
+
+
+@media ( max-width: 640px )
+    .page-template-page-home
+        .hero-swiper
+            .swiper-wrapper
+                .swiper-slide
+                    .slide-bg
+                        &--0
+                           background-position: 52%
+                        &--1
+                            background-position: 38%
+                        &--2
+                            background-position: 40%
+                        &--3
+                            background-position: 48%
+                        &--4
+                            background-position: 41%
+                        &--5
+                            background-position: 50%

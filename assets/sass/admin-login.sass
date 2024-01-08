@@ -1,0 +1,46 @@
+body
+  @apply bg-white bg-no-repeat bg-contain
+  background-position: bottom
+  background-position-y: 140%
+
+#login
+  width: 370px
+  #login_error
+    color: #000
+  .message
+    color: #000
+  h1
+    a
+      width: 90px
+      height: 44px
+      background-size: 90px 44px
+      &:focus
+        box-shadow: none
+
+  form
+    @apply shadow-none p-10 border-white/0 bg-white
+    label
+      @apply text-xs mb-2 font-serif font-thin uppercase leading-normal tracking-widest
+    .input
+        @apply w-full border-2 border-white border-b-gold py-3 px-2 font-sans text-base
+          @apply font-sans text-gray-300 text-base
+        &:focus-visible
+          @apply outline-blue/5 rounded-none
+    input[type="submit"]
+      @apply font-serif font-light text-gold text-base transition-all duration-500 ease-in-out inline-flex justify-center items-center bg-white uppercase py-2 px-11 border border-gold rounded-none tracking-widest mt-8 hover:text-white hover:bg-gold
+
+  #backtoblog, #nav
+    @apply font-sans font-light text-center
+    a
+       @apply  font-sans font-light
+
+  input:-webkit-autofill
+    -webkit-box-shadow: 0 0 0 30px white inset
+    -webkit-text-fill-color: #000 !important
+
+.wpml-login-ls
+  form#wpml-login-ls-form
+    select#wpml-language-switcher-locales
+      @apply rounded-none border border-solid uppercase text-xs font-sans font-semibold transition-all duration-300 ease-in hover:bg-white
+    input.button
+      @apply rounded-none border border-solid uppercase text-xs font-sans font-semibold px-4 py-1 transition-all duration-300 ease-in hover:bg-white
