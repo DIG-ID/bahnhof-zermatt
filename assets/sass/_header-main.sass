@@ -1,0 +1,29 @@
+#header-main
+  .site-branding
+    .navbar-brand
+      svg
+        max-width: 56px
+        height: auto
+        object-fit: cover
+
+  .navigation-main
+    .menu-left
+      @apply float-left w-2/5
+
+    .menu-right
+      @apply float-right w-2/5
+
+    ul.main-menu-top-level
+      @apply flex
+      li.menu-item
+        @apply my-[10px] mx-[22.5px]
+        a
+          @apply block relative py-1 font-serif text-sm leading-[14px] tracking-[0.08em] uppercase pb-[2px] border-b-2 border-b-transparent transition-all ease-in-out duration-200 hover:border-b-black
+      &--left
+        @apply justify-end
+        li.menu-item
+          @apply last-of-type:mr-0
+
+      &--right
+        li.menu-item
+          @apply first-of-type:ml-0
