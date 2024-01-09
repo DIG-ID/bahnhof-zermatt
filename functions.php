@@ -6,9 +6,9 @@ function bz_theme_setup() {
 
 	register_nav_menus(
 		array(
-			'main'                    => __( 'Main Menu', 'bz' ),
-			'menu-stay'               => __( 'Menu Stay', 'bz' ),
-			'copyright'               => __( 'Copryright Menu', 'bz' ),
+			'main'        => __( 'Main Menu', 'bz' ),
+			'menu-footer' => __( 'Menu Footer', 'bz' ),
+			'copyright'   => __( 'Copryright Menu', 'bz' ),
 		)
 	);
 
@@ -147,28 +147,6 @@ function bz_theme_enqueue_styles() {
 
 add_action( 'wp_enqueue_scripts', 'bz_theme_enqueue_styles' );
 
-
-/**
- * Create a customized options page and store the data in a variable for later use
- */
-function bz_theme_acf_op_gc_init() {
-	if ( function_exists( 'acf_add_options_page' ) ) :
-		$theme_option_page = acf_add_options_page(
-			array(
-				'page_title'      => __( 'Bahnhof Theme Options', 'bz' ),
-				'menu_title'      => __( 'Theme Options', 'bz' ),
-				'menu_slug'       => 'bz-theme-general-options',
-				'capability'      => 'edit_posts',
-				'icon_url'        => get_template_directory_uri() . '/assets/images/hotel-resort-alex-theme-icon.png',
-				'redirect'        => false,
-				'update_button'   => __( 'Update Options', 'bz' ),
-				'updated_message' => __( 'Bahnhhof Options Updated', 'bz' ),
-			)
-		);
-	endif;
-}
-
-add_action( 'acf/init', 'bz_theme_acf_op_gc_init' );
 
 /**
  * Lowers the metabox priority to 'core' for Yoast SEO's metabox.
