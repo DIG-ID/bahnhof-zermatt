@@ -23,22 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
-    /* Set mega-menu height */
-    const megaMenu = document.querySelector('.mega-menu-wrapper');
-    let navHeight = '';
-    if ( window.innerWidth > 1280 ) {
-      navHeight = 108; // Change this to match the actual height of your navigation bar
-    } else {
-      navHeight = 64; // Change this to match the actual height of your navigation bar
-    }
 
-    function setElementHeight() {
-      const height = window.innerHeight - navHeight;
-      megaMenu.style.setProperty('--element-height', `${height}px`);
-    }
-
-    setElementHeight();
-    window.addEventListener('resize', setElementHeight);
 
     /* Hamburguer toogle */ 
     const $toggleBtn = $('.main-menu-toggle')
