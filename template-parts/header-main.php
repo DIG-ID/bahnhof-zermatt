@@ -1,5 +1,5 @@
 <header id="header-main" class="header-main w-full top-0 fixed z-40 bg-white" itemscope itemtype="http://schema.org/WebSite">
-	<nav class="navigation-main w-full flex items-center h-16" role="navigation" aria-label="<?php esc_attr_e( 'main navigation', 'az' ); ?>">
+	<nav class="navigation-main w-full flex items-center h-[70px]" role="navigation" aria-label="<?php esc_attr_e( 'main navigation', 'az' ); ?>">
 		<div class="mega-menu-buttons md:px-8 absolute top-1/2 -translate-y-1/2 md:translate-y-0 left-8 md:top-0 md:left-0 md:relative leading-[0] xl:w-32 hidden invisible">
 			<button class="main-menu-toggle">
 				<span class="bars">
@@ -24,13 +24,6 @@
 			);
 			?>
 			<div class="site-branding absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-				<?php
-				if ( is_front_page() ) :
-					echo '<h1 class="screen-reader-text">' . get_bloginfo( 'name' ) . '</h1>';
-				else :
-					echo '<p class="screen-reader-text">' . get_bloginfo( 'name' ) . '</p>';
-				endif;
-				?>
 				<a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url" class="navbar-brand custom-logo-link"><?php do_action( 'theme_logo' ); ?></a>
 			</div>
 			<?php
