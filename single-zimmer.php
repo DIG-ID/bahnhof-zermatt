@@ -5,7 +5,11 @@ if ( have_posts() ) :
 		the_post();
 		do_action( 'before_main_content' );
 			do_action( 'before_post_content' );
-			the_title();
+			get_template_part( 'template-parts/posts/post-header' );
+			get_template_part( 'template-parts/posts/zimmer/gallery' );
+			get_template_part( 'template-parts/posts/zimmer/description' );
+			get_template_part( 'template-parts/posts/zimmer/amenities' );
+			get_template_part( 'template-parts/posts/zimmer/buttons' );
 			do_action( 'after_post_content' );
 		do_action( 'after_main_content' );
 	endwhile;
