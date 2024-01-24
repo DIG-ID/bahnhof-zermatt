@@ -1,0 +1,23 @@
+.fixed-booking-button-wrapper
+  .discount-badge
+    @apply bg-orange-red p-1 break-words w-[40px] min-h-[30px] flex justify-center items-center relative
+    &:after
+      content: ''
+      @apply absolute top-full block border-l-[20px] border-r-[20px] border-t-[20px] border-l-transparent border-r-transparent border-t-orange-red
+
+#sb-container-modal
+  .sb
+    &__form-field-label
+      @apply font-serif uppercase tracking-wider
+    &__form-field
+      @apply w-full
+      &--checkin
+        @apply mb-6
+      &--checkout
+        @apply mb-3
+    &__btn
+      &--verify
+        @apply font-serif italic text-sm leading-[18px] tracking-widest rounded-none
+    &__footer-link--promo,
+    &__footer-link--edit
+      @apply flex justify-center items-center

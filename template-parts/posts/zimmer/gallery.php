@@ -12,7 +12,7 @@
 							<figure class="">
 								<?php echo wp_get_attachment_image( $image_id, $size, false, array( 'class' => 'w-full h-auto object-cover max-h-[500px]' ) ); ?>
 								<figcaption class="w-full text-center py-3 font-serif text-sm leading-[25px] tracking-widest">
-									<div class="swiper-pagination"></div><?php echo wp_get_attachment_caption( $image_id ); ?>
+									<!-- <div class="swiper-pagination"></div> --><?php echo wp_get_attachment_caption( $image_id ); ?>
 								</figcaption>
 							</figure>
 						</div>

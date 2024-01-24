@@ -35,7 +35,7 @@
 		</div>
 	</div>
 
-	<div class="bz-grid bz-container">
+	<!-- <div class="bz-grid bz-container">
 		<div class="col-span-1 md:col-span-8 xl:col-span-12 flex justify-center items-center">
 			<div class="copy-info flex flex-col xl:flex-row order-2 xl:order-1">
 				<p class="text-footer !text-xs xl:!text-sm text-center xl:text-right mr-0 xl:mr-4">
@@ -57,6 +57,6 @@
 				</p>
 			</div>
 		</div>
-	</div>
+	</div> -->
 
 </footer>
