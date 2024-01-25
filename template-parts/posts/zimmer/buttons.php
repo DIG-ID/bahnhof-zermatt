@@ -2,7 +2,7 @@
 	<div class="bz-container">
 		<div class="max-w-5xl mx-auto flex flex-col justify-center items-center gap-4">
 			<?php
-			$blink = get_field( 'link' );
+			$blink = get_field( 'booking_link' );
 			if ( $blink ) :
 				?>
 				<a class="btn--book" href="<?php echo esc_url( $link_url ); ?>" target=_blank"><?php esc_html_e( '→ Book your vacation', 'bz' ); ?></a>
