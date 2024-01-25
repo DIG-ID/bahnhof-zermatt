@@ -1,4 +1,4 @@
-<section class="section-teasers mb-40 relative overflow-hidden">
+<section class="section-teasers mb-40 relative">
 	<?php
 	$paraimage = get_field( 'parallax_background' );
 	if ( $paraimage ) {
