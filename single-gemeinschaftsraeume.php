@@ -5,7 +5,10 @@ if ( have_posts() ) :
 		the_post();
 		do_action( 'before_main_content' );
 			do_action( 'before_post_content' );
-			the_title();
+			get_template_part( 'template-parts/posts/post-header' );
+			get_template_part( 'template-parts/posts/common-rooms/gallery' );
+			get_template_part( 'template-parts/posts/common-rooms/description' );
+			get_template_part( 'template-parts/posts/common-rooms/buttons' );
 			do_action( 'after_post_content' );
 		do_action( 'after_main_content' );
 	endwhile;

@@ -90,23 +90,17 @@ if ( ! function_exists( 'bz_get_font_face_styles' ) ) :
 		return "
 			@font-face {
 				font-family: 'Pressura';
-				src: url('" . esc_url( get_template_directory_uri() ) . "/assets/fonts/GT-Pressura/GT-Pressura-Bold.woff') format('woff');
-				font-weight: 700;
-				font-style: normal;
+				src: url('" . esc_url( get_template_directory_uri() ) . "/assets/fonts/GT-Pressura/GT-Pressura-Bold.eot?') format('eot'), url('" . esc_url( get_template_directory_uri() ) . "/assets/fonts/GT-Pressura/GT-Pressura-Bold.otf') format('opentype'), url('" . esc_url( get_template_directory_uri() ) . "/assets/fonts/GT-Pressura/GT-Pressura-Bold.ttf') format('truetype'), url('" . esc_url( get_template_directory_uri() ) . "/assets/fonts/GT-Pressura/GT-Pressura-Bold.woff') format('woff');
 			}
 
 			@font-face {
 				font-family: 'Lyon';
-				src: url('" . esc_url( get_template_directory_uri() ) . "/assets/fonts/LyonText/LyonText-Semibold-Web.woff2') format('woff2'), url('/assets/fonts/LyonText/LyonText-Semibold-Web.woff') format('woff');
-				font-weight: 600;
-				font-style: normal;
+				src: url('" . esc_url( get_template_directory_uri() ) . "/assets/fonts/LyonText/LyonText-Semibold-Web.eot?') format('eot'), url('" . esc_url( get_template_directory_uri() ) . "/assets/fonts/LyonText/LyonText-Semibold-Web.woff') format('woff'), url('" . esc_url( get_template_directory_uri() ) . "/assets/fonts/LyonText/LyonText-Semibold-Web.woff2') format('woff2');
 			}
 
 			@font-face {
-				font-family: 'Lyon';
-				src: url('" . esc_url( get_template_directory_uri() ) . "/assets/fonts/LyonText/LyonText-SemiboldItalic-Web.woff2') format('woff2'), url('" . esc_url( get_template_directory_uri() ) . "/assets/fonts/LyonText/LyonText-SemiboldItalic-Web.woff') format('woff');
-				font-weight: 600;
-				font-style: italic;
+				font-family: 'Lyon-italic';
+				src: url('" . esc_url( get_template_directory_uri() ) . "/assets/fonts/LyonText/LyonText-SemiboldItalic-Web.eot?') format('eot'), url('" . esc_url( get_template_directory_uri() ) . "/assets/fonts/LyonText/LyonText-SemiboldItalic-Web.woff') format('woff'), url('" . esc_url( get_template_directory_uri() ) . "/assets/fonts/LyonText/LyonText-SemiboldItalic-Web.woff2') format('woff2');
 			}
 		";
 
@@ -122,7 +116,7 @@ if ( ! function_exists( 'bz_preload_webfonts' ) ) :
 	function bz__preload_webfonts() {
 		?>
 		<link rel="preload" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/fonts/GT-Pressura/GT-Pressura-Bold.woff" as="font" type="font/woff" crossorigin>
-		<link rel="preload" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/fonts/LyonText/LyonText-Semibold-Web.woff2" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/fonts/LyonText/LyonText-SemiboldItalic-Web.woff" as="font" type="font/woff" crossorigin>
 		<link rel="preload" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/fonts/LyonText/LyonText-Semibold-Web.woff" as="font" type="font/woff" crossorigin>
 		<?php
 	}
@@ -153,6 +147,11 @@ function bz_theme_enqueue_styles() {
 	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'theme-scripts', get_stylesheet_directory_uri() . '/dist/js/main.js', array( 'jquery' ), $theme_version, false );
 
+	if ( is_page_template( 'page-templates/page-contact.php' ) ) :
+		wp_enqueue_script( 'google-map-api', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCB2RShyxiN7xPsQy1QI_SbqXXjW5p08S0', array(), $theme_version, true );
+		wp_enqueue_script( 'google-map-settings', get_stylesheet_directory_uri() . '/dist/js/googleMaps.js', array( 'jquery' ), $theme_version, true );
+	endif;
+
 	/*if ( is_home() ) :
 		wp_enqueue_script( 'blog-ajax', get_template_directory_uri() . '/dist/js/blog-ajax.js', array( 'jquery' ), $theme_version, true );
 		wp_localize_script( 'blog-ajax', 'blog_ajax_object', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
@@ -161,6 +160,14 @@ function bz_theme_enqueue_styles() {
 
 add_action( 'wp_enqueue_scripts', 'bz_theme_enqueue_styles' );
 
+// Google maps
+function my_acf_init() {
+	acf_update_setting( 'google_api_key', 'AIzaSyCB2RShyxiN7xPsQy1QI_SbqXXjW5p08S0' );
+}
+
+if ( is_page_template( 'page-templates/page-contact.php' ) || is_admin() ) :
+	add_action( 'acf/init', 'my_acf_init' );
+endif;
 
 /**
  * Lowers the metabox priority to 'core' for Yoast SEO's metabox.

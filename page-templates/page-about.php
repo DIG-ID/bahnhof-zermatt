@@ -10,6 +10,8 @@ if ( have_posts() ) :
 		do_action( 'before_main_content' );
 			do_action( 'before_post_content' );
 				get_template_part( 'template-parts/pages/page-header' );
+				get_template_part( 'template-parts/pages/about/content' );
+				get_template_part( 'template-parts/pages/about/partners' );
 			do_action( 'after_post_content' );
 		do_action( 'after_main_content' );
 	endwhile;

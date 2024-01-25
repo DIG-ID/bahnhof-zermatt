@@ -19,8 +19,8 @@ document.addEventListener("DOMContentLoaded", () => {
       isFadedIn = false;
     });
 
-    if (document.body.classList.contains("post-type-archive-zimmer")) {
-      $('.info-button').on( 'click', () => {
+    if (document.body.classList.contains("post-type-archive-zimmer") || document.body.classList.contains("post-type-archive-gemeinschaftsraeume")) {
+      $('.info-button').on( 'click', function () {
         $('.info-content').slideToggle();
         $(this).toggleClass('closed opened');
       });

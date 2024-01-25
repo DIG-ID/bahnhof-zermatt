@@ -1,4 +1,5 @@
 #header-main
+  @apply transition-all duration-200 ease-in-out
   .site-branding
     .navbar-brand
       svg
@@ -30,3 +31,6 @@
       &--right
         li.menu-item
           @apply first-of-type:ml-0
+
+#header-main.sticky
+  @apply shadow-sm

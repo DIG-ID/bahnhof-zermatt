@@ -1,4 +1,3 @@
-import imagesLoaded from 'imagesloaded';
 import { gsap } from "gsap";
 import Lenis from '@studio-freight/lenis';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -12,6 +11,8 @@ const lenis = new Lenis({
   duration: 1,
   smooth: true
 });
+
+lenis.on('scroll', ScrollTrigger.update);
 
 function raf(time) {
   lenis.raf(time)
@@ -29,33 +30,6 @@ gsap.ticker.add((time)=>{
 
 $(function() {
 
-  const xl = 1280
-
-  //Default values for almost all animations
-  const animationConfig = {
-    default: {
-      scrubSpeed: 1,
-      animDuration: 1.2,
-      fadeDistance: "50px",
-      defaultStart: "top 80%",
-      defaultEnd: "bottom 90%",
-      defaultActions: "play none reverse none"
-    },
-    intro: {
-      scrubSpeed: 1,
-      animDuration: 1.2,
-      fadeDistance: "50px",
-      defaultStart: "top 80%",
-      defaultEnd: "bottom 80%",
-      defaultActions: "play none reverse none"
-    },
-  };
-
-  const defaultCfg = animationConfig.default;
-  const introCfg = animationConfig.intro;
-
-  const defaultitemcfg = {opacity: 0, y: defaultCfg.fadeDistance, autoAlpha: 0};
-  const introitemcfg = {opacity: 0, y: introCfg.fadeDistance, autoAlpha: 0};
 
 
   /*****************************************
@@ -64,9 +38,18 @@ $(function() {
    *                                       *
    ****************************************/
   if ( $(".page-template-page-home")[0] ) {
-    
+    // Images parallax
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.section-teasers',
+        scrub: true,
+        pin: false,
+        helpers: true,
+      }
+    });
 
-  }
+    tl.fromTo('.parallax-bg', { yPercent: -10}, { yPercent: -40, ease: 'none' });
+  };
 
 
 

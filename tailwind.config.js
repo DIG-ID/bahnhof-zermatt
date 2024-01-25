@@ -13,6 +13,7 @@ module.exports = {
     fontFamily: {
       sans: ['Pressura', 'sans-serif'],
       serif: ['Lyon', 'serif'],
+      italic: ['Lyon-italic', 'serif'],
     },
     extend: {
       colors: {

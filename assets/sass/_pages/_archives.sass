@@ -1,8 +1,31 @@
-.post-type-archive-zimmer
+.post-type-archive-zimmer,
+.post-type-archive-gemeinschaftsraeume
   .information
     .info-button
-      @apply font-serif italic text-sm leading-[18px] tracking-[0.08em] uppercase bg-orange-red text-white transition-all duration-200 ease-in-out py-3 px-6 text-center w-full max-w-[180px] mx-auto inline-block mb-16
-      &--opened
+      @apply font-italic text-sm leading-[18px] tracking-[0.08em] uppercase bg-orange-red text-white transition-all duration-200 ease-in-out py-3 px-6 text-center w-full max-w-[180px] mx-auto inline-block mb-16
+      &.opened
         @apply bg-black
-    .info-button-icon
-      @apply float-end w-4 h-4 relative before:absolute before:h-3 before:w-[2px] before:bg-white after:absolute after:h-3 after:w-[2px] after:bg-white after:-rotate-90
+        .info-button-icon
+          &::before
+            @apply rotate-45
+          &::after
+            @apply -rotate-45
+      .info-button-icon
+        @apply float-end w-4 h-4 relative before:absolute before:h-3 before:w-[2px] before:bg-white after:absolute after:h-3 after:w-[2px] after:bg-white after:-rotate-90 overflow-hidden mt-[2px]
+        &::before,
+        &::after
+          @apply transition-all duration-300 ease-in-out
+    .info-list
+      @apply flex flex-col justify-center items-center
+      li
+        @apply relative pl-3 pb-[1px] font-serif text-sm leading-[25px] tracking-widest
+        &::before
+          content: ''
+          display: block
+          position: absolute
+          top: 50%
+          left: 0
+          transform: translateY(-100%)
+          width: 6px
+          height: 1px
+          background-color: #000

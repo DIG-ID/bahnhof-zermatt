@@ -35,6 +35,3 @@ if ( $aterms ) :
 	</section>
 	<?php
 endif;
-
-
-

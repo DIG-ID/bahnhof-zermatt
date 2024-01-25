@@ -35,18 +35,16 @@ endif;
 						$link_title  = $link_2['title'];
 						$link_target = $link_2['target'] ? $link_2['target'] : '_self';
 						?>
-						<a class="block bg-orange-red w-64 py-3 text-center font-serif text-white text-sm tracking-[0.08em] italic uppercase mx-auto mb-4" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">→ <?php echo esc_html( $link_title ); ?></a>
+						<a class="block bg-orange-red w-64 py-3 text-center font-italic text-white text-sm tracking-[0.08em] uppercase mx-auto mb-4" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">→ <?php echo esc_html( $link_title ); ?></a>
 						<?php
 					endif;
 					?>
-					<p class="font-serif italic text-white text-sm tracking-widest text-center">→ <?php echo esc_html( get_field( 'hero_section_info' ) ); ?></p>
+					<p class="font-italic text-white text-sm tracking-widest text-center">→ <?php echo esc_html( get_field( 'hero_section_info' ) ); ?></p>
 				</div>
 			</div>
 		</div>
 	</div>
 </section>
-<section class="bz-container">
-	<div class="flex justify-center items-center py-6">
-		links
-	</div>
+<section class="bz-container flex justify-center items-center py-6">
+	<?php do_action( 'socials' ); ?>
 </section>

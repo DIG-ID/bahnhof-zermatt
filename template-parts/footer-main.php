@@ -3,13 +3,13 @@
 		<div class="col-span-3 md:col-span-1 text-center">
 			<p class="text-footer"><?php the_field( 'footer_address', 'options' ); ?></p>
 			<?php
-			$google_link = get_field( 'footer_google_maps_url' );
+			$google_link = get_field( 'footer_google_maps_url', 'options' );
 			if ( $google_link ) :
 				$link_url    = $google_link['url'];
 				$link_title  = $google_link['title'];
 				$link_target = $google_link['target'] ? $google_link['target'] : '_self';
 				?>
-				<a class="text-footer--link" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+				<a class="text-footer--link" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">→ <?php echo esc_html( $link_title ); ?></a>
 				<?php
 			endif;
 			?>
@@ -33,6 +33,10 @@
 			);
 			?>
 		</div>
+	</div>
+
+	<div class="bz-container flex justify-center items-center pb-12">
+		<?php do_action( 'socials' ); ?>
 	</div>
 
 	<!-- <div class="bz-grid bz-container">
