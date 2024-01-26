@@ -4,7 +4,7 @@ if ( $hero_img ) :
 	//echo wp_get_attachment_image( $hero_img, 'full', false, array( 'class' => 'w-full object-cover min-h-[530px] md:min-h-[980px] xl:min-h-[760px]' ) );
 endif;
 ?>
-<section class="section-hero mt-[70px] mx-16 h-[85svh] overflow-hidden" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.05) ), url( <?php echo esc_url( wp_get_attachment_image_url( $hero_img, 'full' ) ); ?> );background-position: top; background-repeat: no-repeat; background-size: cover; background-attachment: fixed;">
+<section class="section-hero mt-[70px] mx-4 lg:mx-16 h-[65svh] lg:h-[85svh] overflow-hidden" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.05) ), url( <?php echo esc_url( wp_get_attachment_image_url( $hero_img, 'full' ) ); ?> );background-position: top; background-repeat: no-repeat; background-size: cover; background-attachment: fixed;">
 	<div class="bz-container h-full">
 		<div class="flex flex-col items-center justify-end h-full">
 			<div class="hero-content flex flex-col justify-between">
@@ -12,21 +12,18 @@ endif;
 					<?php
 					$image = get_field( 'hero_section_image' );
 					if ( $image ) :
-						echo wp_get_attachment_image( $image, 'full', false, array( 'class' => 'my-1 mb-4 mx-auto' ) );
+						echo wp_get_attachment_image( $image, 'full', false, array( 'class' => 'my-1 mb-4 mx-auto hidden invisible lg:block lg:visible' ) );
 					endif;
 					?>
-					<p class="font-sans font-normal text-white text-8xl leading-[67px] uppercase text-center tracking-[7px] mb-6"><?php echo esc_html( get_field( 'hero_section_title' ) ); ?></p>
-					<h1 class="font-serif font-normal text-white text-2xl leading-4 tracking-wider text-center"><?php echo esc_html( get_field( 'hero_section_description' ) ); ?></h1>
+					<p class="font-sans font-normal text-white text-[59px] leading-[67px] tracking-[0.06em] lg:text-8xl lg:leading-[67px] uppercase text-center lg:tracking-[7px] lg:mb-6"><?php echo esc_html( get_field( 'hero_section_title' ) ); ?></p>
+					<h1 class="font-serif font-normal text-white text-sm lg:text-2xl leading-4 tracking-wider text-center"><?php echo esc_html( get_field( 'hero_section_description' ) ); ?></h1>
 				</div>
 				<div class="hero-content-bottom my-16">
 					<?php
 					$link_1 = get_field( 'hero_section_discount_button' );
 					if ( $link_1 ) :
-						$link_url    = $link_1['url'];
-						$link_title  = $link_1['title'];
-						$link_target = $link_1['target'] ? $link_1['target'] : '_self';
 						?>
-						<a class="block bg-[#333333] w-64 py-3 text-center font-serif text-white text-sm tracking-[0.08em] mx-auto mb-4" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+						<a class="block bg-[#333333] w-64 py-3 text-center font-serif text-white text-sm tracking-[0.08em] mx-auto mb-4" href="<?php echo esc_url( get_field( 'hero_section_discount_button_link' ) ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo wp_kses_post( get_field( 'hero_section_discount_button_text' ) ); ?></a>
 						<?php
 					endif;
 					$link_2 = get_field( 'hero_section_booking_button' );
@@ -35,7 +32,7 @@ endif;
 						$link_title  = $link_2['title'];
 						$link_target = $link_2['target'] ? $link_2['target'] : '_self';
 						?>
-						<a class="block bg-orange-red w-64 py-3 text-center font-italic text-white text-sm tracking-[0.08em] uppercase mx-auto mb-4" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">→ <?php echo esc_html( $link_title ); ?></a>
+						<a class=" bg-orange-red w-64 py-3 text-center font-italic text-white text-sm tracking-[0.08em] uppercase mx-auto mb-4 transition-all duration-200 ease-in-out hover:bg-white hover:text-orange-red hidden invisible lg:block lg:visible" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">→ <?php echo esc_html( $link_title ); ?></a>
 						<?php
 					endif;
 					?>

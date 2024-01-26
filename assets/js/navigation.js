@@ -48,65 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
         $spanElement.text('Menu');
       }
     });
-    
-
-    //test for languages
-    /*if(window.location.href.indexOf("/en/") > -1) {
-        alert("Spanish language");
-    }*/
-
-
-    /*const megaMenu = document.querySelector('.mega-menu-wrapper');
-    const navHeight = 108; // Replace with the actual height of your navigation bar
-    
-    function setElementHeight() {
-      if (window.innerWidth > 1280) {
-        const height = window.innerHeight - navHeight;
-        megaMenu.style.setProperty('--element-height', `${height}px`);
-      } else {
-        // Reset the element height or handle it as needed when the window is <= 1280px
-        megaMenu.style.removeProperty('--element-height');
-      }
-    }
-    
-    function handleWindowSize() {
-      // Remove the previous resize event listener to prevent multiple listeners
-      window.removeEventListener('resize', setElementHeight);
-    
-      // Add a new event listener only if the window is wider than 1280px
-      if (window.innerWidth > 1280) {
-        setElementHeight();
-        window.addEventListener('resize', setElementHeight);
-      }
-    }
-    
-    window.addEventListener("resize", handleWindowSize);
-    
-    // Call handleWindowSize once on page load to set the initial state
-    handleWindowSize();*/
-
-    // Mega menu accordion
-    let acc = document.querySelectorAll(".menu-accordion");
-    let i;
-    
-    for (i = 0; i < acc.length; i++) {
-      acc[i].addEventListener("click", function () {
-        let isActive = this.classList.contains("active");
-        
-        // Close all accordions
-        for (let j = 0; j < acc.length; j++) {
-          acc[j].classList.remove("active");
-          let panel = acc[j].nextElementSibling;
-          panel.style.maxHeight = null;
-        }
-        
-        if (!isActive) {
-          this.classList.add("active");
-          let panel = this.nextElementSibling;
-          panel.style.maxHeight = panel.scrollHeight + "px";
-        }
-      });
-    }
+  
 
   }, false);
 });

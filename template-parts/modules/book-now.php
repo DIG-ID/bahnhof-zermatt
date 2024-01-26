@@ -1,4 +1,4 @@
-<div class="fixed-booking-button-wrapper fixed -right-[14px] top-1/2 -translate-y-1/2 flex flex-col gap-y-16 items-center justify-center">
+<div class="fixed-booking-button-wrapper fixed -right-[14px] top-1/2 -translate-y-1/2 flex flex-col gap-y-16 items-center justify-center hidden invisible lg:block lg:visible">
 	<?php
 	if ( get_field( 'book_button_discount', 'option' ) ) :
 		?>

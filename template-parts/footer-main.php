@@ -1,6 +1,6 @@
 <footer class="footer-main bg-neutral-100">
-	<div class="bz-container grid grid-cols-3 gap-4 py-12">
-		<div class="col-span-3 md:col-span-1 text-center">
+	<div class="bz-container grid grid-cols-1 lg:grid-cols-3 gap-4 py-12">
+		<div class="col-span-1 text-center">
 			<p class="text-footer"><?php the_field( 'footer_address', 'options' ); ?></p>
 			<?php
 			$google_link = get_field( 'footer_google_maps_url', 'options' );
@@ -14,13 +14,13 @@
 			endif;
 			?>
 		</div>
-		<div class="col-span-3 md:col-span-1 text-center">
+		<div class="col-span-1 text-center">
 			<p class="text-footer">
 				<a class="text-footer--link" href="tel:<?php the_field( 'footer_phone', 'options' ); ?>"><?php the_field( 'footer_phone', 'options' ); ?></a>
 				<a class="text-footer--link" href="mailto:<?php the_field( 'footer_email', 'options' ); ?>"><?php the_field( 'footer_email', 'options' ); ?></a>
 			</p>
 		</div>
-		<div class="col-span-3 md:col-span-1 text-center">
+		<div class="col-span-1 text-center">
 			<?php
 			wp_nav_menu(
 				array(
