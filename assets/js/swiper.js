@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		}
 
 		if (document.body.classList.contains("single-gemeinschaftsraeume")) {
-			var ZimmerSwiper = new Swiper(".gallery-swiper", {
+			var commonroomSwiper = new Swiper(".gallery-swiper", {
 				loop: true,
 				spaceBetween: 0,
 				slidesPerView: 1,
