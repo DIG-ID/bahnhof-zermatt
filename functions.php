@@ -9,7 +9,7 @@ function bz_theme_setup() {
 			'main-left'   => __( 'Main Menu Left', 'bz' ),
 			'main-right'  => __( 'Main Menu Right', 'bz' ),
 			'menu-footer' => __( 'Menu Footer', 'bz' ),
-			'copyright'   => __( 'Copryright Menu', 'bz' ),
+			'mobile-menu' => __( 'Mobile Menu', 'bz' ),
 		)
 	);
 

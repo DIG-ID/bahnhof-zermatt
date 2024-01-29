@@ -1,0 +1,49 @@
+.mobile-menu-toggle
+  @apply w-8 h-8 lg:hidden lg:invisible
+  .bars
+    @apply relative block overflow-hidden h-full w-full
+    .bar
+      @apply block w-8 h-[2px] bg-black absolute transition-all duration-300 ease-in-out opacity-100
+      &:nth-child(1)
+        @apply top-2 left-0
+      &:nth-child(2)
+        @apply top-4 left-0
+      &:nth-child(3)
+        @apply top-6 left-0
+
+#header-main.mobile-menu-open
+  .mobile-menu-toggle
+    .bars
+      .bar
+        @apply block w-8 h-[2px] bg-black absolute
+        &:nth-child(1)
+          @apply rotate-45 translate-y-2
+        &:nth-child(2)
+          @apply opacity-0
+        &:nth-child(3)
+          @apply -rotate-45 -translate-y-2
+
+.mobile-menu-wrapper
+  @apply px-6 py-8 hidden
+  .wpml-ls
+    @apply p-0
+    ul
+      .wpml-ls-item.wpml-ls-current-language
+        .wpml-ls-link
+          @apply border-b-black
+      .wpml-ls-item
+        .wpml-ls-link
+          @apply p-0 inline-block font-serif font-bold text-sm leading-4 tracking-[0.08em] uppercase transition-all duration-200 ease-in-out hover:text-orange-red outline-none border-b-[2px] border-b-transparent hover:border-b-orange-red
+        &:first-child
+          @apply relative
+          &::after
+            content: '/'
+            @apply inline-block mr-1
+
+  .mobile-menu
+    .mobile-menu-content
+      @apply mt-0
+      .menu-item
+        @apply pb-6
+        a
+          @apply inline-block font-serif font-bold text-sm leading-4 tracking-[0.08em] uppercase transition-all duration-200 ease-in-out hover:text-orange-red outline-none

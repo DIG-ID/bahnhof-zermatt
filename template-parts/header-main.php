@@ -30,7 +30,7 @@
 			);
 			?>
 		</div>
-		<button class="main-menu-toggle w-8 h-8 bg-pink">
+		<button class="mobile-menu-toggle">
 			<span class="bars">
 				<span class="bar"></span>
 				<span class="bar"></span>
@@ -44,4 +44,19 @@
 		?>
 	</nav>
 	<?php //get_template_part( 'template-parts/mega-menu' ); ?>
+	<div class="mobile-menu-wrapper">
+		<?php
+		wp_nav_menu(
+			array(
+				'theme_location'  => 'mobile-menu',
+				'menu_id'         => 'mobile-menu-content',
+				'container_class' => 'mobile-menu',
+				'menu_class'      => 'mobile-menu-content',
+				'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+				'fallback_cb'     => '__return_false',
+			)
+		);
+		do_action( 'wpml_add_language_selector' );
+		?>
+	</div>
 </header>
