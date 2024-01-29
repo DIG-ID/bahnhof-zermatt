@@ -23,7 +23,7 @@
 							<a href="<?php echo esc_url( $tlink ); ?>" class="block">
 								<div class="teaser-content relative overflow-hidden">
 									<?php echo wp_get_attachment_image( $timage, 'full', false, array( 'class' => 'w-full max-w-full object-cover max-h-[200px] min-h-[200px] lg:max-h-[] lg:max-h-full' ) ); ?>
-									<h2 class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 font-sans text-[44px] leading-[57px] md:text-[59px] md:leading-[67px] tracking-[0.06em] lg:text-[80px] lg:leading-[80px] lg:tracking-[2px] text-white uppercase text-center"><?php echo esc_html( $ttitle ); ?></h2>
+									<h2 class="title-card--white"><?php echo esc_html( $ttitle ); ?></h2>
 								</div>
 							</a>
 						</div>
@@ -38,7 +38,7 @@
 							<a href="<?php echo esc_url( $tlink ); ?>" class="block">
 								<div class="teaser-content relative overflow-hidden">
 									<?php echo wp_get_attachment_image( $timage, 'full', false, array( 'class' => 'w-full max-w-full object-cover max-h-[200px] min-h-[200px] lg:max-h-full' ) ); ?>
-									<h2 class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 font-sans text-[44px] leading-[57px] md:text-[59px] md:leading-[67px] tracking-[0.06em] lg:text-[80px] lg:leading-[80px] lg:tracking-[2px] text-white uppercase text-center"><?php echo esc_html( $ttitle ); ?></h2>
+									<h2 class="title-card--white"><?php echo esc_html( $ttitle ); ?></h2>
 								</div>
 							</a>
 						</div>

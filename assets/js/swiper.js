@@ -20,6 +20,21 @@ document.addEventListener("DOMContentLoaded", () => {
 			});
 		}
 
+		if (document.body.classList.contains("single-gemeinschaftsraeume")) {
+			var ZimmerSwiper = new Swiper(".gallery-swiper", {
+				loop: true,
+				spaceBetween: 0,
+				slidesPerView: 1,
+				navigation: {
+					nextEl: ".swiper-button-next",
+					prevEl: ".swiper-button-prev",
+				},
+				pagination: {
+					el: ".swiper-pagination",
+					type: "fraction",
+				},
+			});
+		}
 
 
 	}, false);

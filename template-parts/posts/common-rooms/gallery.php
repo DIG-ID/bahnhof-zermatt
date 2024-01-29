@@ -1,4 +1,4 @@
-<section class="zimmer-gallery mb-10">
+<section class="common-rooms-gallery mb-10">
 	<div class="bz-container">
 		<div class="max-w-5xl mx-auto swiper gallery-swiper">
 			<?php
