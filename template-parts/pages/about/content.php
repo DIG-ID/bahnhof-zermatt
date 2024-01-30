@@ -1,4 +1,4 @@
-<section class="section-teasers mb-40 relative">
+<section class="section-teasers mb-20 lg:mb-40 relative">
 	<div class="bz-container">
 		<?php
 		if ( have_rows( 'teasers' ) ) :
@@ -10,8 +10,8 @@
 
 				if ( $counter % 2 === 0 ) :
 					?>
-					<div class="teaser-row grid grid-cols-2">
-						<div class="teaser-card col-span-1">
+					<div class="teaser-row grid grid-cols-1 md:grid-cols-2">
+						<div class="teaser-card col-span-1 mb-8 lg:mb-0">
 							<div class="teaser-content relative overflow-hidden">
 								<figure>
 									<?php echo wp_get_attachment_image( $timage, 'full', false, array( 'class' => 'mb-4' ) ); ?>
@@ -19,14 +19,14 @@
 								</figure>
 							</div>
 						</div>
-						<div class="col-span-1"></div>
+						<div class="col-span-1 hidden invisible md:block md:visible"></div>
 					</div>
 					<?php
 				else :
 					?>
-					<div class="teaser-row grid grid-cols-2">
-						<div class="col-span-1"></div>
-						<div class="teaser-card col-span-1">
+					<div class="teaser-row grid-cols-1 grid md:grid-cols-2">
+						<div class="col-span-1 hidden invisible md:block md:visible"></div>
+						<div class="teaser-card col-span-1 mb-8 lg:mb-0">
 							<div class="teaser-content relative overflow-hidden">
 								<figure class="float-end">
 									<?php echo wp_get_attachment_image( $timage, 'full', false, array( 'class' => 'mb-4' ) ); ?>

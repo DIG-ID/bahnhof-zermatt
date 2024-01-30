@@ -18,6 +18,17 @@
       &:nth-child(5)
         @apply mt-24
 
+.page-template-page-about
+  .teaser-wrapper
+    .teaser-row
+      &:nth-child(2)
+        @apply -mt-24
+      &:nth-child(4)
+        @apply -mt-40
+      &:nth-child(10)
+        @apply -mt-40
+
+
 @media ( max-width: 1024px )
   .page-template-page-home
     .teaser-wrapper
@@ -34,14 +45,12 @@
           @apply mt-0
         &:nth-child(5)
           @apply mt-0
-
-
-.page-template-page-about
-  .teaser-wrapper
-    .teaser-row
-      &:nth-child(2)
-        @apply -mt-24
-      &:nth-child(4)
-        @apply -mt-40
-      &:nth-child(10)
-        @apply -mt-40
+  .page-template-page-about
+    .teaser-wrapper
+      .teaser-row
+        &:nth-child(2)
+          @apply mt-0
+        &:nth-child(4)
+          @apply mt-0
+        &:nth-child(10)
+          @apply mt-0

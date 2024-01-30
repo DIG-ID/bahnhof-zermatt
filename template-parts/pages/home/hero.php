@@ -12,7 +12,7 @@ endif;
 					<?php
 					$image = get_field( 'hero_section_image' );
 					if ( $image ) :
-						echo wp_get_attachment_image( $image, 'full', false, array( 'class' => 'my-1 mb-4 mx-auto hidden invisible lg:block lg:visible' ) );
+						echo wp_get_attachment_image( $image, 'full', false, array( 'class' => 'my-1 mb-4 mx-auto max-w-[140px] lg:max-w-full' ) );
 					endif;
 					?>
 					<p class="font-sans font-normal text-white text-[59px] leading-[67px] tracking-[0.06em] lg:text-8xl lg:leading-[67px] uppercase text-center lg:tracking-[7px] lg:mb-6"><?php echo esc_html( get_field( 'hero_section_title' ) ); ?></p>
@@ -42,6 +42,18 @@ endif;
 		</div>
 	</div>
 </section>
-<section class="bz-container flex justify-center items-center py-6">
+<section class="bz-container lg:justify-center lg:items-center py-6 hidden invisible lg:flex lg:visible">
 	<?php do_action( 'socials' ); ?>
 </section>
+<div class="bz-containter mx-4 lg:mx-16 py-6 text-center lg:hidden lg:invisible">
+<?php
+if ( $link_2 ) :
+	$link_url    = $link_2['url'];
+	$link_title  = $link_2['title'];
+	$link_target = $link_2['target'] ? $link_2['target'] : '_self';
+	?>
+	<a class="block bg-orange-red w-full py-3 text-center font-italic text-white text-sm tracking-[0.08em] uppercase mx-auto mb-4 transition-all duration-200 ease-in-out hover:bg-white hover:text-orange-red " href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">→ <?php echo esc_html( $link_title ); ?></a>
+	<?php
+endif;
+?>
+</div>

@@ -1,4 +1,4 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'card card--zimmer col-span-4 mb-8' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'card card--zimmer cols-span-1 md:col-span-3 lg:col-span-4 mb-8' ); ?>>
 	<a class="card--image-link" href="<?php the_permalink(); ?>">
 		<figure class="overflow-hidden">
 			<?php the_post_thumbnail( 'post-thumbnail', array( 'class' => 'w-full object-cover h-auto /max-h-[204px]' ) ); ?>

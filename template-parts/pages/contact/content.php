@@ -9,10 +9,10 @@
 			?>
 			<figcaption class="font-serif text-sm tracking-[0.035em] py-2"><?php the_field( 'intro_image_description' ); ?></figcaption>
 		</figure>
-		<p class="font-serif text-[20px] leading-[35px] tracking-[0.035em]"><?php the_field( 'contacts_address' ); ?></p>
-		<p class="font-serif text-[20px] leading-[35px] tracking-[0.035em]"><?php esc_html_e( 'Phone ', 'bz' ); ?><?php the_field( 'contacts_phone' ); ?></p>
-		<p class="font-serif text-[20px] leading-[35px] tracking-[0.035em]"><?php the_field( 'contacts_email' ); ?></p>
+		<p class="description !mb-0"><?php the_field( 'contacts_address' ); ?></p>
+		<p class="description !mb-0"><?php esc_html_e( 'Phone ', 'bz' ); ?><?php the_field( 'contacts_phone' ); ?></p>
+		<p class="description !mb-0"><?php the_field( 'contacts_email' ); ?></p>
 
-		<p class="font-serif text-[20px] leading-[35px] tracking-[0.035em] mt-10"><?php the_field( 'contacts_schedule' ); ?></p>
+		<p class="description !mb-0 mt-10"><?php the_field( 'contacts_schedule' ); ?></p>
 	</div>
 </section>

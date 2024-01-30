@@ -1,4 +1,4 @@
-<section class="section-teasers mb-40 relative">
+<section class="section-teasers mb-20 lg:mb-40 relative">
 	<?php
 	$paraimage = get_field( 'parallax_background' );
 	if ( $paraimage ) {
