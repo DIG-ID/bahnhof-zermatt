@@ -2,13 +2,12 @@
 get_header();
 do_action( 'before_main_content' );
 ?>
-<section class="section-error-404 not-found  az-container overflow-hidden mt-8 md:mt-12 xl:mt-28 mb-20 md:mb-36 xl:mb-52">
-	<div class="az-container-grid">
-		<div class="col-span-1 md:col-span-8 xl:col-span-8 xl:col-start-3 flex flex-col text-center justify-center items-center">
-			<span class="az-vertical-line-medium inline-block mb-12"></span>
-			<h1 class="title-sub mb-10 md:mb-12 xl:mb-16"><?php esc_html_e( '404 - Nichts gefunden', 'bz' ); ?></h1>
-			<p class="title-xl !hyphens-none mb-10 md:mb-12 xl:mb-16"><?php esc_html_e( 'Ups... es scheint, als ob Sie sich in den Bergen verirrt haben.', 'bz' ); ?></p>
-			<a href="<?php echo esc_url( get_home_url() ); ?>" class="btn btn--arrow-left"><?php esc_html_e( 'Zurück zur Webseite', 'bz' ); ?></a>
+<section class="section-error-404 not-found py-64">
+	<div class="bz-container">
+		<div class="flex flex-col text-center justify-center items-center">
+			<h1 class="title !mb-4"><?php esc_html_e( '404 - Nichts gefunden', 'bz' ); ?></h1>
+			<p class="description"><?php esc_html_e( 'Ups... es scheint, als ob Sie sich in den Bergen verirrt haben.', 'bz' ); ?></p>
+			<a href="<?php echo esc_url( get_home_url() ); ?>" class="btn"><?php esc_html_e( '← Zurück zur Webseite', 'bz' ); ?></a>
 		</div>
 	</div>
 </section>

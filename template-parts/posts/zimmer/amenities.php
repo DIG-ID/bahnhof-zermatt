@@ -26,7 +26,7 @@ if ( $aterms ) :
 				<ul class="amenities--list">
 				<?php foreach ( $aterms as $aterm ) : ?>
 					<li class="amenities--item">
-						<h2><?php echo esc_html( $aterm->name ); ?></h2>
+						<h2>- <?php echo esc_html( $aterm->name ); ?></h2>
 					</li>
 				<?php endforeach; ?>
 				</ul>
