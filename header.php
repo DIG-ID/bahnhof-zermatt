@@ -6,6 +6,6 @@
 		<?php wp_head(); ?>
 	</head>
 
-	<body <?php body_class(); ?>>
+	<body <?php body_class( 'relative' ); ?>>
 		<?php do_action( 'wp_body_open' ); ?>
 		<?php get_template_part( 'template-parts/header', 'main' ); ?>
