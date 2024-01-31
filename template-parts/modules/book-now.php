@@ -18,13 +18,12 @@
 			</svg>
 		</button>
 		<?php
-		$my_post_language_details = apply_filters( 'wpml_post_language_details', NULL, 1 );
-		if ( $my_post_language_details['language_code'] === 'en' ) :
+		$lang = apply_filters('wpml_current_language', null);
+		if ( $lang === 'en' ) :
 			echo '<div id="sb-container-modal"></div>';
 		else :
 			echo '<div id="sb-container"></div>';
 		endif;
 		?>
 	</div>
-
 </div>
