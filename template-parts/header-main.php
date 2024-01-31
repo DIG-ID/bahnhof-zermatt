@@ -1,4 +1,4 @@
-<header id="header-main" class="header-main w-full top-0 fixed z-40 bg-white" itemscope itemtype="http://schema.org/WebSite">
+<header id="header-main" class="header-main" itemscope itemtype="http://schema.org/WebSite">
 	<nav class="navigation-main w-full flex items-center justify-between lg:justify-center h-[70px] px-6" role="navigation" aria-label="<?php esc_attr_e( 'main navigation', 'az' ); ?>">
 		<div class="menu relative lg:w-full lg:max-w-[1320px] lg:mx-auto">
 
@@ -43,7 +43,6 @@
 		endif;
 		?>
 	</nav>
-	<?php //get_template_part( 'template-parts/mega-menu' ); ?>
 	<div class="mobile-menu-wrapper">
 		<?php
 		wp_nav_menu(

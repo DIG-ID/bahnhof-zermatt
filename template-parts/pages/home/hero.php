@@ -23,7 +23,7 @@ endif;
 					$link_1 = get_field( 'hero_section_discount_button' );
 					if ( $link_1 ) :
 						?>
-						<a class="block bg-[#333333] w-64 py-3 text-center font-serif text-white text-sm tracking-[0.08em] mx-auto mb-4" href="<?php echo esc_url( get_field( 'hero_section_discount_button_link' ) ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo wp_kses_post( get_field( 'hero_section_discount_button_text' ) ); ?></a>
+						<a class="block bg-[#333333] w-64 py-3 text-center font-serif text-white text-sm tracking-[0.08em] mx-auto mb-4" href="<?php echo esc_url( get_field( 'hero_section_discount_button_link' ) ); ?>" target="_blank"><?php echo wp_kses_post( get_field( 'hero_section_discount_button_text' ) ); ?></a>
 						<?php
 					endif;
 					$link_2 = get_field( 'hero_section_booking_button' );

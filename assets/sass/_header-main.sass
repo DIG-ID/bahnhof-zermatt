@@ -1,5 +1,5 @@
 #header-main
-  @apply transition-all duration-200 ease-in-out
+  @apply transition-all duration-200 ease-in-out w-full top-0 fixed z-40 bg-white
   .site-branding
     .navbar-brand
       svg
@@ -34,3 +34,11 @@
 
 #header-main.sticky
   @apply shadow-sm
+
+
+body.admin-bar #header-main
+  @apply top-8
+
+@media ( max-width: 782px )
+  body.admin-bar #header-main
+    @apply top-[46px]
