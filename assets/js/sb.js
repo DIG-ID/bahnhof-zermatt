@@ -13,13 +13,13 @@ document.addEventListener("DOMContentLoaded", () => {
       SBSyncroBox({
         CodLang: 'DE',
         Styles: {
-        Theme: 'light-pink',
-        CustomBGColor:'#FFFFFF',
-        CustomColor:'#000000',
-        CustomLabelColor:'#000000',
-        CustomButtonBGColor:'#ff5050',
-        CustomButtonColor:'#ffffff',
-        CustomButtonHoverBGColor:'#ff5050',
+          Theme: 'light-pink',
+          CustomBGColor:'#FFFFFF',
+          CustomColor:'#000000',
+          CustomLabelColor:'#000000',
+          CustomButtonBGColor:'#ff5050',
+          CustomButtonColor:'#ffffff',
+          CustomButtonHoverBGColor:'#ff5050',
         },
       });
       
@@ -27,14 +27,14 @@ document.addEventListener("DOMContentLoaded", () => {
         CodLang: 'EN',
         MainContainerId: 'sb-container-modal',
         Styles: {
-        Theme: 'light-pink',
-        CustomBGColor:'#FFFFFF',
-        CustomColor:'#000000',
-        CustomLabelColor:'#000000',
-        CustomButtonBGColor:'#ff5050',
-        CustomButtonColor:'#ffffff',
-        CustomButtonHoverBGColor:'#ff5050',
-      },
+          Theme: 'light-pink',
+          CustomBGColor:'#FFFFFF',
+          CustomColor:'#000000',
+          CustomLabelColor:'#000000',
+          CustomButtonBGColor:'#ff5050',
+          CustomButtonColor:'#ffffff',
+          CustomButtonHoverBGColor:'#ff5050',
+        },
       });
  
   }, false);

@@ -10,7 +10,7 @@
 				$link_title  = $carlink['title'];
 				$link_target = $carlink['target'] ? $carlink['target'] : '_self';
 				?>
-				<a class="btn" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">→ <?php echo esc_html( $link_title ); ?></a>
+				<a class="font-serif text-lg leading-8 tracking-[0.006em] lg:text-xl lg:leading-9 lg:tracking-[0.035em] border-b-2 border-b-transparent transition-all duration-200 ease-in-out hover:text-orange-red hover:border-b-orange-red" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">→ <?php echo esc_html( $link_title ); ?></a>
 				<?php
 			endif;
 			$cablink = get_field( 'directions_car' );
@@ -19,7 +19,7 @@
 				$link_title  = $cablink['title'];
 				$link_target = $cablink['target'] ? $cablink['target'] : '_self';
 				?>
-				<a class="btn" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">→ <?php echo esc_html( $link_title ); ?></a>
+				<a class="font-serif text-lg leading-8 tracking-[0.006em] lg:text-xl lg:leading-9 lg:tracking-[0.035em] border-b-2 border-b-transparent transition-all duration-200 ease-in-out hover:text-orange-red hover:border-b-orange-red" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">→ <?php echo esc_html( $link_title ); ?></a>
 				<?php
 			endif;
 			$trainlink = get_field( 'directions_car' );
@@ -28,7 +28,7 @@
 				$link_title  = $trainlink['title'];
 				$link_target = $trainlink['target'] ? $trainlink['target'] : '_self';
 				?>
-				<a class="btn" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">→ <?php echo esc_html( $link_title ); ?></a>
+				<a class="font-serif text-lg leading-8 tracking-[0.006em] lg:text-xl lg:leading-9 lg:tracking-[0.035em] border-b-2 border-b-transparent transition-all duration-200 ease-in-out hover:text-orange-red hover:border-b-orange-red" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">→ <?php echo esc_html( $link_title ); ?></a>
 				<?php
 			endif;
 			?>
