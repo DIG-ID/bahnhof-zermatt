@@ -8,7 +8,7 @@
 		<?php
 	endif;
 	?>
-	<button class="fixed-book-button text-sm leading-[18px] tracking-widest uppercase border-b-2 border-black transition-all duration-300 ease-in-out hover:text-orange-red hover:border-b-orange-red rotate-90"><?php esc_html_e( 'Book Now', 'az' ); ?></button>
+	<button class="fixed-book-button text-sm leading-[18px] tracking-widest uppercase border-b-2 border-black transition-all duration-300 ease-in-out hover:text-orange-red hover:border-b-orange-red rotate-90"><?php esc_html_e( 'Book Now', 'bz' ); ?></button>
 </div>
 <div class="fixed-booking-container fixed right-16 top-1/2 -translate-y-1/2  bg-white max-w-[300px] drop-shadow-md" style="display: none;" >
 	<div class="relative p-6">
@@ -25,5 +25,6 @@
 			echo '<div id="sb-container"></div>';
 		endif;
 		?>
+		<p class="font-italic text-sm tracking-widest text-center mt-4">→ <?php esc_html_e( 'Exklusive room selection', 'bz' ); ?></p>
 	</div>
 </div>

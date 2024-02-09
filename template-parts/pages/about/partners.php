@@ -1,6 +1,6 @@
 <section class="section-partners mb-40">
 	<div class="bz-container">
-		<h2 class="title py-6 lg:py-12 text-center"><?php esc_html_e( 'Partners', 'bz' ); ?></h2>
+		<h2 class="title py-6 lg:py-12 text-center"><?php esc_html_e( 'Partner', 'bz' ); ?></h2>
 		<div class="grid gird-cols-1 md:grid-cols-3 gap-x-9">
 			<?php
 			if ( have_rows( 'partners' ) ) :
