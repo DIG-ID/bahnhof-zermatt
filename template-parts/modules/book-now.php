@@ -3,7 +3,7 @@
 	if ( get_field( 'book_button_discount', 'option' ) ) :
 		?>
 		<div class="discount-badge">
-			<span class="font-serif text-white text-[13px] leading-[13px] tracking-[0.08em] uppercase break-words text-center"><?php the_field( 'book_button_discount_amount', 'option' ); ?></span>
+			<span class="font-serif text-white text-[12px] leading-[12px] uppercase break-words text-center"><?php the_field( 'book_button_discount_amount', 'option' ); ?></span>
 		</div>
 		<?php
 	endif;
