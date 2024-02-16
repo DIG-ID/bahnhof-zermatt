@@ -10,7 +10,7 @@
 	?>
 	<button class="fixed-book-button text-sm leading-[18px] tracking-widest uppercase border-b-2 border-black transition-all duration-300 ease-in-out hover:text-orange-red hover:border-b-orange-red rotate-90"><?php esc_html_e( 'Book Now', 'bz' ); ?></button>
 </div>
-<div class="fixed-booking-container fixed right-16 top-1/2 -translate-y-1/2  bg-white max-w-[300px] drop-shadow-md" style="display: none;" >
+<div class="fixed-booking-container fixed right-16 top-1/2 -translate-y-1/2  bg-white max-w-[300px] drop-shadow-md z-10" style="display: none;" >
 	<div class="relative p-6">
 		<button class="closeButton absolute top-2 right-2">
 			<svg xmlns="http://www.w3.org/2000/svg" class="max-h-4 transition-all duration-300 ease-in-out opacity-40 hover:opacity-100" x="0px" y="0px" width="16" height="16" viewBox="0 0 30 30">
