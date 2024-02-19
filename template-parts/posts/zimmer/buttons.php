@@ -5,7 +5,7 @@
 			$blink = get_field( 'booking_link' );
 			if ( $blink ) :
 				?>
-				<a class="btn--book" href="<?php echo esc_url( $link_url ); ?>" target=_blank"><?php esc_html_e( '→ Book your vacation', 'bz' ); ?></a>
+				<a class="btn--book" href="<?php echo esc_url( $blink ); ?>" target=_blank"><?php esc_html_e( '→ Book your vacation', 'bz' ); ?></a>
 				<?php
 			endif;
 			?>
