@@ -15,6 +15,7 @@
 				$ttitle = get_sub_field( 'title' );
 				$tlink  = get_sub_field( 'link' );
 				$timage = get_sub_field( 'image' );
+				
 
 				if ( $counter % 2 === 0 ) :
 					?>
@@ -22,7 +23,14 @@
 						<div class="teaser-card col-span-1 mb-8 lg:mb-0">
 							<a href="<?php echo esc_url( $tlink ); ?>" class="block">
 								<div class="teaser-content relative overflow-hidden">
-									<?php echo wp_get_attachment_image( $timage, 'full', false, array( 'class' => 'w-full max-w-full object-cover max-h-[200px] min-h-[200px] lg:max-h-[] lg:max-h-full' ) ); ?>
+									<?php
+									if ( get_sub_field( 'use_different_image_in_mobile' ) ) :
+										$mimage = get_sub_field( 'image_mobile' );
+										echo wp_get_attachment_image( $mimage, 'full', false, array( 'class' => 'w-full max-w-full object-cover max-h-[200px] min-h-[200px] lg:max-h-[] lg:max-h-full' ) );
+									else :
+										echo wp_get_attachment_image( $timage, 'full', false, array( 'class' => 'w-full max-w-full object-cover max-h-[200px] min-h-[200px] lg:max-h-[] lg:max-h-full' ) );
+									endif;
+									?>
 									<h2 class="title-card--white"><?php echo esc_html( $ttitle ); ?></h2>
 								</div>
 							</a>
