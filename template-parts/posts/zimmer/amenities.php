@@ -23,10 +23,14 @@ if ( $aterms ) :
 		<div class="bz-container">
 			<div class="max-w-5xl mx-auto flex flex-col justify-center items-center">
 				<?php
-				if ( get_field( 'room_or_dorm' ) === 'room' ) :
-					?><h2 class="font-serif text-sm leading-[25px] tracking-widest text-center mb-5"><?php esc_html_e( 'These rooms offers:', 'bz' ); ?></h2><?php
+				if ( get_field( 'use_custom_amenities_title' ) ) :
+					?><h2 class="font-serif text-sm leading-[25px] tracking-widest text-center mb-5"><?php the_field( 'custom_amenities_title' ); ?></h2><?php
 				else :
-					?><h2 class="font-serif text-sm leading-[25px] tracking-widest text-center mb-5"><?php esc_html_e( 'Each dorm offers:', 'bz' ); ?></h2><?php
+					if ( get_field( 'room_or_dorm' ) === 'room' ) :
+						?><h2 class="font-serif text-sm leading-[25px] tracking-widest text-center mb-5"><?php esc_html_e( 'These rooms offer:', 'bz' ); ?></h2><?php
+					else :
+						?><h2 class="font-serif text-sm leading-[25px] tracking-widest text-center mb-5"><?php esc_html_e( 'Each dorm offers:', 'bz' ); ?></h2><?php
+					endif;
 				endif;
 				?>
 				<ul class="amenities--list">

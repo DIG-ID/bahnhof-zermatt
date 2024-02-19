@@ -1,7 +1,5 @@
 body
-  @apply bg-white bg-no-repeat bg-contain
-  background-position: bottom
-  background-position-y: 140%
+  @apply bg-white
 
 #login
   width: 370px
@@ -11,28 +9,29 @@ body
     color: #000
   h1
     a
-      width: 90px
-      height: 44px
-      background-size: 90px 44px
+      width: 70px
+      height: 30px
+      background-size: 70px 30px
+      margin-bottom: 0px
       &:focus
         box-shadow: none
 
   form
-    @apply shadow-none p-10 border-white/0 bg-white
+    @apply shadow-none p-10 border-white/0 bg-white mt-0
     label
-      @apply text-xs mb-2 font-serif font-thin uppercase leading-normal tracking-widest
-    .input
-        @apply w-full border-2 border-white border-b-gold py-3 px-2 font-sans text-base
-          @apply font-sans text-gray-300 text-base
-        &:focus-visible
-          @apply outline-blue/5 rounded-none
+      @apply font-serif uppercase font-semibold text-xs mb-2 tracking-wider
+    input#user_pass,
+    input#user_login
+      @apply rounded-none w-full
+      &:focus-visible
+        @apply outline-pink
     input[type="submit"]
-      @apply font-serif font-light text-gold text-base transition-all duration-500 ease-in-out inline-flex justify-center items-center bg-white uppercase py-2 px-11 border border-gold rounded-none tracking-widest mt-8 hover:text-white hover:bg-gold
+      @apply inline-block font-italic italic font-normal text-sm leading-[18px] tracking-[0.08em] border border-pink text-pink uppercase py-[10px] px-[22px] transition-all duration-300 ease-in-out hover:bg-pink hover:text-white bg-white rounded-none
 
   #backtoblog, #nav
-    @apply font-sans font-light text-center
+    @apply font-serif font-light text-center
     a
-       @apply  font-sans font-light
+       @apply  font-serif font-light
 
   input:-webkit-autofill
     -webkit-box-shadow: 0 0 0 30px white inset
