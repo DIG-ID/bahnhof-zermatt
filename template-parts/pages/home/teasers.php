@@ -26,9 +26,11 @@
 									<?php
 									if ( get_sub_field( 'use_different_image_in_mobile' ) ) :
 										$mimage = get_sub_field( 'image_mobile' );
-										echo wp_get_attachment_image( $mimage, 'full', false, array( 'class' => 'w-full max-w-full object-cover max-h-[200px] min-h-[200px] lg:max-h-[] lg:max-h-full md:hidden md:invisible' ) );
+										echo wp_get_attachment_image( $mimage, 'full', false, array( 'class' => 'w-full max-w-full object-cover max-h-[200px] min-h-[200px] lg:max-h-full md:hidden md:invisible' ) );
+										echo wp_get_attachment_image( $timage, 'full', false, array( 'class' => 'w-full max-w-full object-cover max-h-[200px] min-h-[200px] lg:max-h-full hidden invisible md:visible md:block' ) );
+									else :
+										echo wp_get_attachment_image( $timage, 'full', false, array( 'class' => 'w-full max-w-full object-cover max-h-[200px] min-h-[200px] lg:max-h-full' ) );
 									endif;
-									echo wp_get_attachment_image( $timage, 'full', false, array( 'class' => 'w-full max-w-full object-cover max-h-[200px] min-h-[200px] lg:max-h-[] lg:max-h-full hidden invisible md:block md:visible' ) );
 									?>
 									<h2 class="title-card--white"><?php echo esc_html( $ttitle ); ?></h2>
 								</div>
